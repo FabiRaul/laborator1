@@ -1,0 +1,50 @@
+import java.util.Scanner;
+import java.util.Random;
+public class Laborator1 {
+    public static void main ( String args []) {
+        Scanner sc = new Scanner ( System . in ) ;
+        System.out.println("Introduceti un numar intreg de 4 cifre: ");
+        int nr = sc.nextInt();
+        
+        System.out.println(" ");
+        System.out.println("Alegeti una din optiunile de mai jos: ");
+        System.out.println("1. Afisare paritate ultima cifra ");
+        System.out.println("2. Afisare paritate prima cifra ");
+        System.out.println("3. Afisare suma cifrelor ");
+        System.out.println("4. Iesire ");
+        System.out.println(" ");
+        int alege = sc.nextInt();
+    
+        while(alege<4){
+            switch(alege){
+                case 1:
+                    if(nr%2==0){
+                        System.out.println("Ultima cifra este para");
+                    } else {
+                        System.out.println("Ultima cifra este impara");
+                    }
+                    break;
+                case 2:
+                    int x = nr/1000;
+                    if(x%2==0){
+                        System.out.println("Prima cifra este para");`
+                    } else {
+                        System.out.println("Prima cifra este impara");
+                    }
+                    break;
+                case 3:
+                    x = nr;
+                    int suma = 0;
+                    while(x!=0){
+                        suma = suma + x%10;
+                        x=x/10;
+                    }
+                    System.out.println("Suma cifrelor numarului este: " + suma);
+                    break;
+            }
+            System.out.println("Introduceti o noua optiune: ");
+            alege = sc.nextInt();
+        }
+    
+    }
+}

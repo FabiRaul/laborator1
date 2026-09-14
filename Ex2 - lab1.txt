@@ -1,0 +1,29 @@
+import java.util.Scanner;
+import java.util.Random;
+public class Laborator1 {
+    public static void main ( String args []) {
+    Scanner sc = new Scanner ( System . in ) ;
+    
+    System . out . println (" Introduceti primul numar : ") ;
+    int nr1 = sc . nextInt () ;
+    
+    System . out . println (" Introduceti al doilea numar numar : ") ;
+    int nr2 = sc . nextInt () ;
+    Random rnd = new Random () ;
+    
+    int suma = nr1 + nr2;
+    int produs = nr1*nr2;
+    int cat = nr1/nr2;
+    int rest = nr1%nr2;
+    int inm_rand1 = nr1*rnd.nextInt(255);
+    int inm_rand2 = nr2*rnd.nextInt(255);
+    
+    System.out.println("Suma este: " + suma);
+    System.out.println("Produsul este: " + produs);
+    System.out.println("Catul este: " + cat);
+    System.out.println("Restul este: " + rest);
+    System.out.println("Inmultirea cu un nr random pentru primul numar este: " + inm_rand1);
+    System.out.println("Inmultirea cu un nr random pentru al doilea numar numar este: " + inm_rand2);
+    
+    }
+}
